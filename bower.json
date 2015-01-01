@@ -1,6 +1,6 @@
 {
   "name": "sample-bower-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/masakura/sample-bower-js",
   "authors": [
     "Tomo Masakura <tomo.masakura@gmail.com>"
@@ -16,6 +16,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "package.json",
+    "Gruntfile.js"
   ]
 }
