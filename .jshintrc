@@ -20,6 +20,7 @@
   "jquery": true,
   "globals": {
     "_": false,
+    "Backbone": false,
     "describe": false,
     "it": false,
     "expect": false,

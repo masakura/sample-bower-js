@@ -25,7 +25,23 @@ window.testmator = (function () {
     return child;
   };
 
-  var PageObject = function () {
+  var PageObject = function (options) {
+    var el = (options && options.el) || options;
+    if (_.isFunction(el)) {
+      el = el();
+    }
+    // '#hoge' -> $('#hoge')
+    if (_.isString(el)) {
+      el = $(el);
+    }
+    // view = new Backbone.View({el: '#hoge'});
+    // el = view.el
+    if (el && el.el) {
+      el = el.el;
+    }
+
+    this.$el = (el instanceof $) ? el : $(el);
+    this.el = this.$el[0];
   };
 
   _.extend(PageObject, {

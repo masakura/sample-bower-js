@@ -26,7 +26,11 @@ module.exports = function (grunt) {
         src: 'foo.js',
         options: {
           specs: 'test/spec/{,*/}*.js',
-          vendor: 'bower_components/underscore/underscore.js'
+          vendor: [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/underscore/underscore.js',
+            'bower_components/backbone/backbone.js'
+          ]
         }
       }
     }
