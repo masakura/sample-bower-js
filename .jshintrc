@@ -19,7 +19,10 @@
   "smarttabs": true,
   "jquery": true,
   "globals": {
+    "_": false,
     "describe": false,
-    "it": false
+    "it": false,
+    "expect": false,
+    "testmator": false
   }
 }

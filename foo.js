@@ -1,5 +1,7 @@
 window.testmator = (function () {
   'use strict';
 
-  return {};
+  return _.extend({}, {
+    name: 'testmator'
+  });
 })();

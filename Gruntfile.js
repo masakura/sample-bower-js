@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   var config = {
-    javascripts: ['*.js']
+    javascripts: ['*.js', 'test/**/*.js']
   };
 
   grunt.initConfig({
@@ -25,7 +25,8 @@ module.exports = function (grunt) {
       all: {
         src: 'foo.js',
         options: {
-          specs: 'test/spec/{,*/}*.js'
+          specs: 'test/spec/{,*/}*.js',
+          vendor: 'bower_components/underscore/underscore.js'
         }
       }
     }
