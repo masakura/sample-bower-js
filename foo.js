@@ -1,2 +1,5 @@
-console.log('sample-bower-js');
-console.log('beta');
+window.testmator = (function () {
+  'use strict';
+
+  return {};
+})();
