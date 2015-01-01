@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jscs');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   var config = {
     javascripts: ['*.js']
@@ -18,9 +19,21 @@ module.exports = function (grunt) {
 
     jscs: {
       all: config.javascripts
+    },
+
+    jasmine: {
+      all: {
+        src: 'foo.js',
+        options: {
+          specs: 'test/spec/{,*/}*.js'
+        }
+      }
     }
   });
 
+  grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('jscheck', ['jshint', 'jscs']);
-  grunt.registerTask('fulltest', ['jscheck']);
+  grunt.registerTask('fulltest', ['jscheck', 'test']);
+
+  grunt.registerTask('default', ['fulltest']);
 };
