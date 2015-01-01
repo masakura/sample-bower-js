@@ -18,6 +18,9 @@
     "test",
     "tests",
     "package.json",
-    "Gruntfile.js"
+    "Gruntfile.js",
+    ".editorconfig",
+    ".jshintrc",
+    ".jscscrc"
   ]
 }
